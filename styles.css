@@ -10,6 +10,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Source Sans Pro";
+  background-color: #333333;
 }
 
 /* Styling for the header and navigation menu */
@@ -17,10 +18,9 @@
   background-color: #333333;
   padding: 20px;
   width: 100%;
-  border-style: solid;
+  border-style: solid;  
   border-color: #ffffff;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
+  border-width: 1px 0; /* Specifies 1px for top and bottom, 0 for left and right */
 }
 
 nav ul {
@@ -51,7 +51,6 @@ nav ul li a {
   width: 100%;
   padding: 4rem 2rem;
   z-index: 3;
-  background-color: antiquewhite;
 }
 
 #wrapper:before {
@@ -63,11 +62,6 @@ nav ul li a {
   display: flex;
   justify-content: center;
   text-align: center;
-  border-style: solid;
-  border-color: #ffffff;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
-  max-width: 100%;
 }
 
 #header .content .inner {
