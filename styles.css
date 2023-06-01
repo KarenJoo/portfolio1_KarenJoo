@@ -18,7 +18,7 @@
   background-color: #333333;
   padding: 20px;
   width: 100%;
-  border-style: solid;  
+  border-style: solid;
   border-color: #ffffff;
   border-width: 1px 0; /* Specifies 1px for top and bottom, 0 for left and right */
 }
@@ -100,5 +100,7 @@ nav ul li a {
 
   nav ul {
     justify-content: center;
+    flex-direction: column;
+    padding: 20px;
   }
 }
