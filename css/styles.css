@@ -124,9 +124,6 @@ nav ul li a {
   flex-direction: row;
 }
 
-#about {
-  border-width: 0px;
-}
 
 .section-border {
   border-style: solid;
@@ -136,12 +133,10 @@ nav ul li a {
   width: 100%;
 }
 
-#about .section-border {
-  border-width: 0 0 1px;
-}
+
 
 .section-content {
-  width: 85%;
+  width: 95%;
   height: 80vh;
   margin: 0px auto;
   background-color: #fff;
