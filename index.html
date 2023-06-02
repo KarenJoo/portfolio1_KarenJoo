@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The home page of Karen Jo Portfolio" />
-    <link href="/styles.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="/css/cards.css" re="stylesheet" />
     <title>Karen Jo Portfolio | Home page</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;600&display=swap");
@@ -31,22 +32,57 @@
       </header>
     </div>
     <main>
-      <section id="about">
-        <h1>About Section</h1>
+    
         <!-- Content of the about section -->
+      <section id="about">
+        <div class="section-content">
+        <h1>About Section</h1>
+        <p> Textt about me</p>
+        </div>
       </section>
-
+       
+      <!-- Content of the portfolio section -->
       <section id="portfolio">
         <h1>Portfolio Section</h1>
-        <!-- Content of the portfolio section -->
+
+        <!-- Project 1 card -->
         <div id="card">
           <h2>Project 1</h2>
-          <img src="#" alt="screenshot of the index page" />
+          <img
+            src="../img/health-screen.jpg"
+            alt="screenshot of the Health Hub index page"
+          />
           <div id="direct-links">
             <a href="#">Link to Github</a>
             <a href="#">Link to Live site</a>
           </div>
         </div>
+
+        <!-- Project 2 card -->
+        <div id="card">
+            <h2>Project 2</h2>
+            <img
+              src="../img/rainyd-screen.jpg"
+              alt="screenshot of the Rainydays index page"
+            />
+            <div id="direct-links">
+              <a href="#">Link to Github</a>
+              <a href="#">Link to Live site</a>
+            </div>
+          </div>
+
+          <!-- Project 3 card -->
+          <div id="card">
+            <h2>Project 3</h2>
+            <img
+              src="../img/scimu-screen.jpg"
+              alt="screenshot of the Science Museum index page"
+            />
+            <div id="direct-links">
+              <a href="#">Link to Github</a>
+              <a href="#">Link to Live site</a>
+            </div>
+          </div>
       </section>
 
       <section id="contact">

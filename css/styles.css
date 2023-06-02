@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "Source Sans Pro", sans-serif;
+  src: url("../portfolio1_KarenJoo/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf")
+    format("truetype");
+}
+
+:root {
+  --width: 100%;
+  --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro";
+  background-color: #333333;
+}
+
+body,
+html {
+  margin: 0 auto;
+}
+
+main {
+  justify-content: center;
+  width: var(--width);
+}
+
+/* Styling for the header and navigation menu */
+#header {
+  background-color: #333333;
+  padding: 20px;
+  width: var(--width);
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1px 0; /* Specifies 1px for top and bottom, 0 for left and right */
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#contact h1,
+#portfolio h1,
+#about h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  min-height: 100vh;
+  width: var(--width);
+  padding: 4rem 2rem;
+  z-index: 3;
+}
+
+#wrapper:before {
+  content: "";
+  display: block;
+}
+
+#header .content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#header .content .inner {
+  padding: 3rem 2rem;
+  max-height: 40rem;
+  overflow: hidden;
+}
+
+#header .content h1 {
+  color: #fff;
+}
+#header .content p {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 12px;
+  line-height: 5;
+  color: #fff;
+}
+
+/* sections */
+#portfolio {
+  display: flex;
+  justify-content: space-between;
+}
+
+#about,
+#contact {
+  font-size: 30px;
+  min-height: 80vh;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-content {
+  width: 85%;
+  height: 80vh;
+  background-color: #fff;
+}
+
+/* cards */
+
+#card h2,
+#card {
+  width: 33.33%;
+  margin: 0 10px;
+  margin-top: 50px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+
+  /* Glass effect (instagram @codewithfaraz) */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.639),
+    rgba(255, 255, 255, 0.072)
+  );
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.031);
+}
+
+#direct-links,
+#direct-links a,
+#card h2 {
+  margin: 20px;
+  box-shadow: none;
+  border: none;
+  background: none;
+}
+
+#direct-links a,
+#direct-links {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#card img {
+  width: var(--width);
+  height: 300px;
+  object-fit: cover;
+  object-position: top 10% left 0%;
+  box-shadow: var(--box-shadow);
+}
+
+#contact {
+  display: flex;
+  flex-direction: row;
+}
+
+/* media screen for mobile */
+@media screen and (max-width: 480px) {
+  #header {
+    text-align: center;
+  }
+
+  nav {
+    display: inline-block;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+/* Media queries for desktop */
+@media screen and (max-width: 1680px) {
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
