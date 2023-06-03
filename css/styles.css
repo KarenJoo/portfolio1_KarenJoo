@@ -56,14 +56,16 @@ main {
   text-decoration: none;
 }
 
-/* Side Menu */
+/* Side Menu (by chatGPT)*/
 #side-menu {
   position: fixed;
   top: 50%;
-  left: -300px; /* Initial position off-screen */
+  left: 50%;
   transform: translateY(-50%);
   width: 150px;
-  background-color: #333;
+  border-color: #ffffff;
+  border-width: 1px 0px;
+  border-style: solid;
   color: #fff;
   padding: 20px;
   transition: left 0.3s ease-in-out;
@@ -77,6 +79,39 @@ main {
 
 #side-menu ul li {
   padding: 10px;
+  font-size: 15px;
+  border-color: #ffffff;
+  border-width: 1px 1px;
+}
+
+#close-button {
+  border: none;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#reopen-menu {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 50px;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+  border-color: #ffffff;
+  border-width: 1px 1px;
+  border-style: solid;
 }
 
 /* Show side menu when scrolling below 100vh */
