@@ -57,10 +57,11 @@ main {
 }
 
 /* Side Menu (by chatGPT)*/
+
 #side-menu {
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: -300px; 
   transform: translateY(-50%);
   width: 150px;
   border-color: #ffffff;
@@ -113,6 +114,7 @@ main {
   border-width: 1px 1px;
   border-style: solid;
 }
+
 
 /* Show side menu when scrolling below 100vh */
 .scrolled #side-menu {
