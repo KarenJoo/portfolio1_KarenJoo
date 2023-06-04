@@ -74,6 +74,11 @@ main {
   z-index: 9998;
 }
 
+/*display the side menu by translating it horizontally  */
+#side-menu .show {
+  transform: translateY(-50%) translateX(0); 
+}
+
 #side-menu ul {
   list-style: none;
   padding: 20px;
