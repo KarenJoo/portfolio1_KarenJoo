@@ -7,14 +7,12 @@ function toggleSideMenu() {
   //scrollTop and pageYOffset to to get the current scroll position (chatGPT)
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  // determining when to display/not display the side menu using wrapperDisplay (.offsetTop)
-  // scrolling past wrapper the reopen side menu is visible
   if (scrollTop > wrapperDisplay) {
-    sideMenu.style.left = "-300px"; // Hide the side menu by moving it off-screen
-    reopenBox.style.display = "block"; // Show the reopen box
+    sideMenu.classList.add("show"); // Adding the 'show' class
+    reopenBox.style.display = "block"; // displaying the reopen box
   } else {
-    sideMenu.style.left = "-300px"; // Hide the side menu by moving it off-screen
-    reopenBox.style.display = "none"; // Hide the reopen box
+    sideMenu.classList.remove("show"); // Removing the 'show' class
+    reopenBox.style.display = "none"; // Hiding the reopen box
   }
 }
 
