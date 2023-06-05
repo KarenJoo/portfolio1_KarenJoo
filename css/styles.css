@@ -26,13 +26,21 @@ html {
 main {
   justify-content: center;
   width: var(--width);
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 8fr);
+}
+
+#section-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 img.logo {
   height: auto;
   width: 100%;
-opacity: 9%;
-margin-top: 200px;
+  opacity: 9%;
+  margin-top: 200px;
 }
 
 /* Styling for the header and navigation menu */
@@ -58,7 +66,7 @@ margin-top: 200px;
   margin-right: 20px;
 }
 
-#side-menu ul li a,
+.side-menu ul li a,
 #main-menu ul li a {
   color: var(--white);
   text-decoration: none;
@@ -66,10 +74,10 @@ margin-top: 200px;
 
 /* Side Menu (by chatGPT)*/
 
-#side-menu {
+.side-menu {
   position: fixed;
   top: 50%;
-  left: -300px; 
+  left: -300px;
   transform: translateY(-50%);
   width: 150px;
   border-color: var(--white);
@@ -82,16 +90,16 @@ margin-top: 200px;
 }
 
 /*display the side menu by translating it horizontally  */
-#side-menu .show {
-  transform: translateY(-50%) translateX(0); 
+.side-menu .show {
+  transform: translateY(-50%) translateX(0);
 }
 
-#side-menu ul {
+.side-menu ul {
   list-style: none;
   padding: 20px;
 }
 
-#side-menu ul li {
+.side-menu ul li {
   padding: 10px;
   font-size: 15px;
   border-color: var(--white);
@@ -109,7 +117,7 @@ margin-top: 200px;
   font-size: 15px;
 }
 
-#reopen-menu {
+.reopen-menu {
   position: fixed;
   top: 50%;
   left: 10px;
@@ -128,9 +136,8 @@ margin-top: 200px;
   border-style: solid;
 }
 
-
 /* Show side menu when scrolling below 100vh */
-.scrolled #side-menu {
+.scrolled .side-menu {
   left: 0;
 }
 
@@ -145,10 +152,9 @@ margin-top: 200px;
 }
 
 #wrapper {
-  display: flex;
-  flex-direction: column;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   min-height: 100vh;
   width: var(--width);
@@ -176,12 +182,19 @@ margin-top: 200px;
 #header .content h1 {
   color: var(--white);
 }
+
 #header .content p {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 12px;
   line-height: 5;
   color: var(--white);
+}
+
+#aside {
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /* sections */
@@ -206,7 +219,7 @@ margin-top: 200px;
 .section-border {
   border-style: solid;
   border-color: var(--white);
-  border-width: 1px 0;
+  border-width: 0.5px 0px;
   height: 95vh;
   width: 100%;
 }
@@ -226,11 +239,11 @@ margin-top: 200px;
 
 /* cards */
 .card-container {
-  width: 90%;
+  width: 100%;
   height: 60vh;
   display: flex;
   justify-content: space-between;
-  margin-left: 10px;
+  justify-content: center;
 }
 
 .card {
@@ -245,7 +258,7 @@ margin-top: 200px;
 .direct-links,
 .direct-links a,
 .card h2 {
-  margin-top: auto; /* title on top of the card */
+  margin-top: 0px; /* title on top of the card */
   box-shadow: none;
   border: none;
   background: none;
@@ -254,16 +267,16 @@ margin-top: 200px;
 
 .direct-links {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: auto; /* links on bottom of the card */
+  margin-top: 10px; /* links on bottom of the card */
 }
 
 .direct-links a {
   color: var(--white);
   text-decoration: none;
-  margin: 10px auto;
+  margin: 5px auto;
   padding-right: 20px;
 }
 
@@ -278,7 +291,8 @@ margin-top: 200px;
 /* Footer */
 
 #footer {
-  transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+  transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out,
+    opacity 0.325s ease-in-out;
   width: 100%;
   max-width: 100%;
   margin-top: 2rem;
@@ -289,9 +303,15 @@ margin-top: 200px;
 #footer .copyright {
   letter-spacing: 0.2rem;
   font-size: 12px;
-    margin-bottom: 0;
+  margin-top: 20px;
   text-transform: uppercase;
   color: var(--white);
+}
+
+#footer .section-border {
+  padding-top: 20px;
+  height: 80px;
+  border-width: 1px 0px 0px;
 }
 
 /* media screen for mobile */
@@ -308,6 +328,18 @@ margin-top: 200px;
     justify-content: center;
     flex-direction: column;
     padding: 20px;
+  }
+
+  /* burger icon */
+  .reopen-menu {
+    top: 10%;
+    background-color: #333333;
+    width: 60px;
+    font-size: 12px;
+  }
+
+  .side-menu {
+    top: 20%;
   }
 
   #portfolio {
