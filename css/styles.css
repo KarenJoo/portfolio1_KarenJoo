@@ -78,74 +78,6 @@ img.logo {
   text-decoration: none;
 }
 
-/* Side Menu (by chatGPT)*/
-
-.side-menu {
-  position: fixed;
-  top: 50%;
-  left: -300px;
-  transform: translateY(-50%);
-  width: 150px;
-  border-color: var(--white);
-  border-width: 1px 0px;
-  border-style: solid;
-  color: var(--white);
-  padding: 20px;
-  transition: left 0.3s ease-in-out;
-  z-index: 9998;
-}
-
-/*display the side menu by translating it horizontally  */
-.side-menu .show {
-  transform: translateY(-50%) translateX(0);
-}
-
-.side-menu ul {
-  list-style: none;
-  padding: 20px;
-}
-
-.side-menu ul li {
-  padding: 10px;
-  font-size: 15px;
-  border-color: var(--white);
-  border-width: 1px 1px;
-}
-
-#close-button {
-  border: none;
-  color: var(--white);
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.reopen-menu {
-  position: fixed;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  width: 100px;
-  height: 50px;
-  background-color: transparent;
-  color: var(--white);
-  text-align: center;
-  line-height: 50px;
-  cursor: pointer;
-  z-index: 9999;
-  display: none;
-  border-color: var(--white);
-  border-width: 1px 1px;
-  border-style: solid;
-}
-
-/* Show side menu when scrolling below 100vh */
-.scrolled .side-menu {
-  left: 0;
-}
 
 #contact h1,
 #portfolio h1,
@@ -197,11 +129,6 @@ img.logo {
   color: var(--white);
 }
 
-#aside {
-  width: 30%;
-  padding: 20px;
-  box-sizing: border-box;
-}
 
 /* sections */
 
