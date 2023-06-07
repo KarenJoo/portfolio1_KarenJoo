@@ -1,6 +1,6 @@
 
 
-// Function to open the modal window and display the corresponding section
+// Function to open the modal window and display the corresponding section (chatGPT)
 function openModal(sectionId) {
   const modal = document.querySelector(".modal");
   const modalContent = document.querySelector(".modal-content");
