@@ -8,6 +8,7 @@
   --width: 100%;
   --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   --white: #fff;
+  ---grey: #333; 
 }
 /* Reset some default styles */
 * {
@@ -15,7 +16,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Source Sans Pro";
-  background-color: #333333;
+  background-color: var(--white);
 }
 
 body,
@@ -43,19 +44,19 @@ html {
 
 img.logo {
   height: auto;
-  width: 100%;
-  opacity: 9%;
-  margin-top: 50px;
+  object-fit: cover;
+  width: 400px;
+  opacity: 100%;
 }
 
 /* Design inspiration from: https://html5up.net/dimension */
 /* Styling for the header and navigation menu */
 #header {
-  background-color: #333333;
+  background-color: var(--white);
   padding: 30px 20px;
   width: var(--width);
   border-style: solid;
-  border-color: var(--white);
+  border-color: var(--grey);
   border-width: 1px 0; /* Specifies 1px for top and bottom, 0 for left and right */
   position: relative;
   z-index: 1;
@@ -74,7 +75,7 @@ img.logo {
 }
 
 #header .content h1 {
-  color: var(--white);
+  color: var(--grey);
 }
 
 #header .content p {
@@ -82,7 +83,7 @@ img.logo {
   letter-spacing: 0.2rem;
   font-size: 12px;
   line-height: 5;
-  color: var(--white);
+  color: var(--grey);
 }
 
 #main-menu ul {
@@ -100,7 +101,7 @@ img.logo {
 
 .side-menu ul li a,
 #main-menu ul li a {
-  color: var(--white);
+  color: var(--grey);
   text-decoration: none;
 }
 
@@ -111,7 +112,7 @@ img.logo {
   display: flex;
   justify-content: center;
   text-align: center;
-  color: var(--white);
+  color: var(---grey);
 }
 
 #wrapper {
@@ -153,7 +154,7 @@ img.logo {
 
 .section-border {
   border-style: solid;
-  border-color: var(--white);
+  border-color: var(--grey);
   border-width: 0.5px 0px;
   height: 65vh;
   width: 100%;
@@ -168,7 +169,7 @@ img.logo {
 
 .section-content p {
   display: inline-block;
-  background-color: var(--white);
+  background-color: var(---white);
   padding: 20px;
 }
 
@@ -197,7 +198,7 @@ img.logo {
   box-shadow: none;
   border: none;
   background: none;
-  color: var(--white);
+  color: var(--grey);
 }
 
 .direct-links {
@@ -209,7 +210,7 @@ img.logo {
 }
 
 .direct-links a {
-  color: var(--white);
+  color: var(--grey);
   text-decoration: none;
   margin: 5px auto;
   padding-right: 20px;
@@ -230,8 +231,8 @@ img.logo {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #333333;
-  color: var(--white);
+  background-color: var(---white);
+  color: var(--grey);
   text-align: center;
   padding: 20px 0;
   z-index: 9999;
@@ -241,7 +242,7 @@ img.logo {
   letter-spacing: 0.2rem;
   font-size: 12px;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--grey);
 }
 
 #footer .section-border {
@@ -305,16 +306,7 @@ img.logo {
   }
 
   /* burger icon */
-  .reopen-menu {
-    top: 10%;
-    background-color: #333333;
-    width: 60px;
-    font-size: 12px;
-  }
-
-  .side-menu {
-    top: 20%;
-  }
+ 
 
   #portfolio {
     display: flex;
