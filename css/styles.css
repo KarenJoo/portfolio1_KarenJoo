@@ -32,6 +32,8 @@ html {
 #main {
   justify-content: center;
   width: var(--width);
+  height: 100vh;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr minmax(0, 8fr);
 }
@@ -105,12 +107,18 @@ html {
   text-decoration: none;
 }
 
+#main-menu ul li a:hover {
+  color: var(--orange);
+  transition: color 0.3s ease;
+  font-size: 15px;
+}
+
 #wrapper {
-  grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: 100vh;
+  max-height: 600px;
   width: var(--width);
   z-index: 0;
   overflow: hidden;
@@ -124,12 +132,12 @@ html {
 
 #wrapper h1 {
   position: absolute;
-  top: 50%;
+  top: 400px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
   color: var(--orange);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -163,6 +171,9 @@ html {
   flex-direction: row;
 }
 
+#about {
+  margin-top: 500px;
+}
 
 .section-border {
   border-style: solid;
@@ -171,7 +182,6 @@ html {
   height: 65vh;
   width: 100%;
 }
-
 
 /* Modal window styles */
 .modal {
@@ -194,9 +204,10 @@ html {
   flex-direction: column;
   margin: 20px auto;
   padding: 20px;
-  width: 100%;
-  height: 700px;
-  max-width: 90%;
+  width: 90%;
+  height: 80%;
+  max-width: 800px;
+  max-height: 90%;
   margin-bottom: 100px;
   box-shadow: var(--box-shadow);
   z-index: 2;
@@ -221,17 +232,19 @@ html {
 
 .modal-close {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 20px;
+  right: 30px;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  color: var(--white);
   z-index: 3;
 }
 
 /* cards */
 .card-container {
-  width: 100%;
+  width: 90%;
+  max-width: 100%;
   height: 20vh;
   display: flex;
   justify-content: space-between;
@@ -249,6 +262,11 @@ html {
   align-items: center;
 }
 
+.card-container {
+  max-width: 100%;
+  width: 90%;
+}
+
 .direct-links,
 .direct-links a,
 .card h3 {
@@ -256,7 +274,8 @@ html {
   box-shadow: none;
   border: none;
   background: none;
-  color: var(--grey);
+  font-size: 13px;
+  color: var(--orange);
 }
 
 .direct-links {
@@ -290,16 +309,45 @@ html {
 }
 
 /* about */
-.modal-content.about-content {
+
+.section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.section-content .about-content {
   background-color: #fff;
-  height: 300px;
-  width: 100%;
+  color: #333;
+  width: 90%;
+  max-width: 700px;
+  display: flex;
+  height: 70%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
+.about-content p {
+  font-size: 15px;
+  font-style: normal;
+  margin-top: 40px;
+  padding: 10px;
+  margin: 0px;
+  text-align: left;
+}
+.about-content h4,
+.about-content h5 {
+  text-align: center;
+  padding: 5px;
+}
 
-
-
+.section-content .about-content h3 {
+  color: var(--orange);
+  font-size: 30px;
+  margin-top: 0px;
+}
 
 /* Footer */
 
@@ -313,6 +361,9 @@ html {
   text-align: center;
   padding: 20px 0;
   z-index: 9999;
+  border-style: solid;
+  border-width: 1px 0px 0px;
+  border-color: var(--grey);
 }
 
 #footer .copyright {
@@ -320,12 +371,6 @@ html {
   font-size: 12px;
   text-transform: uppercase;
   color: var(--grey);
-}
-
-#footer .section-border {
-  padding-top: 50px;
-  height: 50px;
-  border-width: 1px 0px 0px 0px;
 }
 
 /* media screen for mobile */
@@ -373,7 +418,8 @@ html {
     height: auto;
   }
 
-  .card-container {
+  .section-content .card-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
@@ -385,7 +431,7 @@ html {
     display: flex;
   }
 
-  .card h2 {
+  .card h3 {
     margin-top: auto;
   }
 
