@@ -152,6 +152,13 @@ html {
 }
 
 /* sections */
+.section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
 
 #portfolio,
 #about,
@@ -206,7 +213,7 @@ html {
   padding: 20px;
   width: 90%;
   height: 80%;
-  max-width: 800px;
+  max-width: 90%;
   max-height: 90%;
   margin-bottom: 100px;
   box-shadow: var(--box-shadow);
@@ -215,9 +222,9 @@ html {
 }
 
 .modal-content h2 {
-  color: #fff !important;
-  font-size: 30px;
-  margin-top: 20px;
+  color: var(--white) !important;
+  font-size: 40px;
+  margin-top: 50px;
 }
 
 .modal-content h3 {
@@ -242,17 +249,17 @@ html {
 }
 
 /* cards */
+
 .card-container {
-  width: 90%;
-  max-width: 100%;
-  height: 20vh;
   display: flex;
-  justify-content: space-between;
   justify-content: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 90%;
 }
 
 .card {
-  margin: 50px 10px;
+  margin: 0px 10px;
   height: 500px;
   background-color: var(--white);
   box-shadow: var(--box-shadow);
@@ -263,8 +270,9 @@ html {
 }
 
 .card-container {
-  max-width: 100%;
-  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .direct-links,
@@ -292,6 +300,10 @@ html {
   margin: 5px auto;
   padding-right: 20px;
 }
+.direct-links a:hover {
+  font-size: 12px;
+  color: var(--orange);
+}
 
 .card img {
   justify-content: center;
@@ -303,19 +315,21 @@ html {
   box-shadow: var(--box-shadow);
 }
 
+.card img.sci-mu {
+  margin-top: 50px;
+}
+
 .card p {
   color: var(--grey);
-  font-size: 15px;
+  font-size: 12px;
+  text-align: left;
+  padding: 5px;
+  margin: 5px;
 }
 
 /* about */
 
-.section-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+.section-content .contact-content,
 .section-content .about-content {
   background-color: #fff;
   color: #333;
@@ -329,6 +343,7 @@ html {
   padding: 20px;
 }
 
+.contact-content p,
 .about-content p {
   font-size: 15px;
   font-style: normal;
@@ -337,16 +352,28 @@ html {
   margin: 0px;
   text-align: left;
 }
+
 .about-content h4,
 .about-content h5 {
   text-align: center;
   padding: 5px;
 }
 
+.section-content .contact-content h3,
 .section-content .about-content h3 {
   color: var(--orange);
   font-size: 30px;
   margin-top: 0px;
+}
+
+/* contact */
+.contact-content a {
+  text-decoration: none;
+  color: var(--orange);
+}
+
+.contact-content a :hover {
+  font-size: 13px;
 }
 
 /* Footer */
