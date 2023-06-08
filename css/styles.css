@@ -70,7 +70,6 @@ html {
   overflow: hidden;
 }
 
-
 #header h1 {
   color: var(--orange);
 }
@@ -105,7 +104,6 @@ html {
   color: var(--grey);
   text-decoration: none;
 }
-
 
 #wrapper {
   grid-template-columns: 1fr 2fr;
@@ -166,7 +164,6 @@ html {
 }
 
 
-
 .section-border {
   border-style: solid;
   border-color: var(--grey);
@@ -174,6 +171,7 @@ html {
   height: 65vh;
   width: 100%;
 }
+
 
 /* Modal window styles */
 .modal {
@@ -192,6 +190,8 @@ html {
 
 .modal-content {
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin: 20px auto;
   padding: 20px;
   width: 100%;
@@ -203,8 +203,6 @@ html {
   background-color: #333333d3;
 }
 
-
-
 .modal-content h2 {
   color: #fff !important;
   font-size: 30px;
@@ -213,10 +211,8 @@ html {
 
 .modal-content h3 {
   text-transform: uppercase;
-padding: 20px;
+  padding: 20px;
 }
-
-
 
 .modal-show {
   display: block;
@@ -233,7 +229,6 @@ padding: 20px;
   z-index: 3;
 }
 
-
 /* cards */
 .card-container {
   width: 100%;
@@ -242,7 +237,6 @@ padding: 20px;
   justify-content: space-between;
   justify-content: center;
 }
-
 
 .card {
   margin: 50px 10px;
@@ -290,11 +284,22 @@ padding: 20px;
   box-shadow: var(--box-shadow);
 }
 
-
 .card p {
   color: var(--grey);
   font-size: 15px;
 }
+
+/* about */
+.modal-content.about-content {
+  background-color: #fff;
+  height: 300px;
+  width: 100%;
+  padding: 20px;
+}
+
+
+
+
 
 /* Footer */
 
@@ -323,13 +328,11 @@ padding: 20px;
   border-width: 1px 0px 0px 0px;
 }
 
-
 /* media screen for mobile */
 @media screen and (max-width: 480px) {
   #header {
-    text-align: center;    
+    text-align: center;
     height: 300px;
-
   }
 
   #main-menu {
@@ -343,10 +346,16 @@ padding: 20px;
   }
 
   #wrapper img {
-height: 400px;
-object-position: top 10px right 70%;
+    height: 400px;
+    object-position: top 10px right 70%;
   }
 
+  #wrapper h1 {
+    font-size: 12px;
+    background-color: #ffffffc0;
+    padding: 20px;
+    top: 20%;
+  }
 
   #portfolio {
     display: flex;
@@ -385,8 +394,6 @@ object-position: top 10px right 70%;
     display: flex;
     flex-direction: column;
   }
-
-
 }
 
 /* Media queries for desktop */
