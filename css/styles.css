@@ -11,6 +11,7 @@
   --grey: #333;
   --orange: #c44b1d;
 }
+
 /* Reset some default styles */
 * {
   margin: 0;
@@ -34,8 +35,6 @@ html {
   width: var(--width);
   height: 100vh;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr minmax(0, 8fr);
 }
 
 #section-container {
@@ -56,6 +55,7 @@ html {
   position: relative;
   z-index: 1;
   text-align: center;
+  transition: min-height 0.3s ease; /* transition for smooth height change if shorter viewport */
 }
 
 #header .content {
@@ -400,9 +400,18 @@ html {
 
 /* media screen for mobile */
 @media screen and (max-width: 480px) {
+  #main {
+    grid-template-columns: 1fr;
+  }
+
   #header {
     text-align: center;
-    height: 300px;
+    height: 240px;
+    min-height: 150px;
+  }
+
+  #header .content .inner {
+    padding: 1rem;
   }
 
   #main-menu {
@@ -412,11 +421,15 @@ html {
   #main-menu ul {
     justify-content: center;
     flex-direction: column;
-    padding: 20px;
+  }
+
+  #main-menu ul li a {
+    height: auto;
+    top: 10%;
   }
 
   #wrapper img {
-    height: 400px;
+    height: 300px;
     object-position: top 10px right 70%;
   }
 
