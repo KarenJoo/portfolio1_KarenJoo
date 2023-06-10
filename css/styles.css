@@ -529,6 +529,7 @@ html {
   }
 
   /* cards */
+
   .card {
     margin-top: 7rem;
     width: 90%;
@@ -536,6 +537,14 @@ html {
   }
 
   /*  about */
+
+  #about {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
   .section-content .about-content {
     width: 300px;
     box-sizing: border-box;
