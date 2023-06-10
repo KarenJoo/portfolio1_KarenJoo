@@ -118,7 +118,7 @@ html {
   justify-content: center;
   position: relative;
   min-height: 100vh;
-  max-height: 500px;
+  max-height: 100vh;
   width: var(--width);
   z-index: 0;
   overflow: hidden;
@@ -311,6 +311,7 @@ html {
   height: 100%;
   object-fit: contain;
   object-position: top 10% left 0%;
+  overflow: hidden;
 }
 
 .card__img::before {
@@ -542,6 +543,22 @@ html {
     width: 100px;
     height: 300px;
     object-fit: contain;
+  }
+
+  .section-content .about-content {
+    margin: 0px;
+    width: 80%;
+    overflow: hidden;
+  }
+
+  .section-content .about-image img {
+    width: 100px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+  .section-content {
+    width: 300px !important;
   }
 }
 
