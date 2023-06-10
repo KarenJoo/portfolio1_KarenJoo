@@ -133,7 +133,7 @@ html {
 #wrapper h1 {
   position: absolute;
   top: 400px;
-  left: 50%;
+  left: 55%;
   transform: translate(-50%, -50%);
   z-index: 1;
   color: var(--orange);
