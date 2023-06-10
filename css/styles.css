@@ -263,7 +263,9 @@ html {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  height: 100%;
+  margin-top: 300px;
+  max-height: calc(100vh - 200px);
+  height: auto;
   box-sizing: border-box;
 }
 
@@ -274,36 +276,34 @@ html {
   flex-direction: column;
   align-items: center;
   margin: 40px 20px;
-  width: 20rem;
-  max-width: 40rem;
-  height: 30rem;
+  width: 90%;
+  max-width: 400px;
+  height: 600px;
   background-color: #fff;
-  padding: 200px 2.5rem;
+  padding: 17rem 2.5rem 200px;
   box-shadow: var(--box-shadow);
   border-radius: 0.8rem;
   position: relative;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
-
- /* img on top */
+/* img on top */
 .card__img {
-  position: absolute; 
-  top: -2.5rem; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  width: 18rem;
-  height: 15rem;
-  border-radius: 0.8rem;
-  overflow: hidden; 
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
 }
 
 .card__img img {
   display: block;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  border-radius: 0.8rem;
 }
 
 .card__img::before {
@@ -316,19 +316,17 @@ html {
 
 .card__title {
   font-size: 2.5rem;
- align-items: center;
+  align-items: center;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
 }
 
-
 .card__info p {
   margin-bottom: 3rem;
   color: #333;
 }
-
 
 .direct-links,
 .direct-links a,
@@ -381,8 +379,7 @@ html {
 
 .section-content .contact-content,
 .section-content .about-content {
-
-} 
+}
 
 .contact-content p,
 .about-content p {
@@ -494,13 +491,9 @@ html {
 
   /* cards */
   .card {
-    padding: 2.5rem;
-    flex-direction: column;
-  }
-
-  .card__img {
-    min-width: 100%;
-    transform: translate(0, -8rem);
+    margin-top: 7rem;
+    width: 90%;
+    margin-bottom: 10px;
   }
 }
 
@@ -508,6 +501,8 @@ html {
 @media screen and (max-width: 868px) {
   .card {
     max-width: 20rem;
+    margin-top: 8rem;
+    margin-bottom: 10px;
   }
 }
 
@@ -520,6 +515,7 @@ html {
 
   .card {
     max-width: 20rem;
+    margin-top: 7rem;
   }
 
   .card__img {
