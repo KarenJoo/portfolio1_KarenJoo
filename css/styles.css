@@ -180,6 +180,11 @@ html {
 
 #about {
   margin-top: 500px;
+  height: 100vh;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .section-border {
@@ -384,10 +389,14 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 700px;
-  width: 700px;
+  height: 800px;
+
   top: 50%;
   left: 0;
+  position: relative; 
+    max-width: 600px;
+    margin: 0 auto; 
+
 }
 
 .contact-content p,
@@ -400,7 +409,9 @@ html {
   text-align: left;
 }
 
-.about-content h4 h5 h6 {
+.about-content h4,
+.about-content h5,
+.about-content h6 {
   text-align: center;
   padding: 5px;
   margin: 0;
@@ -415,9 +426,10 @@ html {
 }
 
 .about-image img {
-  width: 100%;
+  width: 90%;
   height: auto;
   object-position: top 0% left 0%;
+  max-width: 100%; /* Add this line */
 }
 
 /* contact */
@@ -513,11 +525,11 @@ html {
     margin-bottom: 10px;
   }
 
-  /*  about, contact */
-  .section-content .contact-content,
+  /*  about */
   .section-content .about-content {
-    height: 100%;
-  }
+    width: 300px; 
+    box-sizing: border-box; 
+    margin: 0;
 }
 
 /* tablet */
@@ -546,6 +558,5 @@ html {
     max-width: 30rem;
   }
 
-  .about-title {
-  }
+}
 }
