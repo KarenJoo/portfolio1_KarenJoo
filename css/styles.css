@@ -296,17 +296,15 @@ html {
   width: 90%;
   height: auto;
   overflow: hidden;
-  box-shadow: var(--box-shadow); 
-
+  box-shadow: var(--box-shadow);
 }
 
 .card__img img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;   
+  object-fit: contain;
   object-position: top 10% left 0%;
-
 }
 
 .card__img::before {
@@ -386,8 +384,8 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60%;
-  width: 600px;
+  height: 700px;
+  width: 700px;
   top: 50%;
   left: 0;
 }
@@ -409,10 +407,17 @@ html {
 }
 
 .contact-content h3,
-.about-content .about-title {
+.about-title {
   color: var(--orange);
   font-size: 30px;
-  top: 20%;
+  top: 10%;
+  margin-bottom: 10px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-position: top 0% left 0%;
 }
 
 /* contact */
@@ -510,9 +515,9 @@ html {
 
   /*  about, contact */
   .section-content .contact-content,
-.section-content .about-content {
-  height: 600px;
-}
+  .section-content .about-content {
+    height: 100%;
+  }
 }
 
 /* tablet */
@@ -539,5 +544,8 @@ html {
   .card__img {
     min-width: 10rem;
     max-width: 30rem;
+  }
+
+  .about-title {
   }
 }
