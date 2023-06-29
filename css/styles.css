@@ -2,6 +2,7 @@
   font-family: "Source Sans Pro", sans-serif;
   src: url("../portfolio1_KarenJoo/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf")
     format("truetype");
+  font-weight: 200;
 }
 
 :root {
@@ -36,11 +37,15 @@ main {
   width: 100%;
 }
 
-img.logo {
+.logo h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 200;
+  font-size: 10vw; /* Adjust the value to viewport */
   height: auto;
   width: 100%;
-  opacity: 9%;
-  margin-top: 200px;
+  max-width: 100vh;
+  color: #fff;
+  margin-top: 400px;
 }
 
 /* Styling for the header and navigation menu */
@@ -49,6 +54,7 @@ img.logo {
   padding: 20px;
   width: var(--width);
   border-style: solid;
+  top: 200px;
   border-color: var(--white);
   border-width: 1px 0; /* Specifies 1px for top and bottom, 0 for left and right */
 }
@@ -104,9 +110,6 @@ img.logo {
   text-decoration: none;
 }
 
-
-
-
 /* Show side menu when scrolling below 100vh */
 .scrolled .side-menu {
   left: 0;
@@ -161,7 +164,6 @@ img.logo {
   line-height: 5;
   color: var(--white);
 }
-
 
 /* sections */
 
@@ -312,7 +314,6 @@ img.logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-
   }
 
   #portfolio h1 {
@@ -342,11 +343,10 @@ img.logo {
   }
 
   /* contact */
-#contact .section-border {
-  background-color: aqua;
-  margin-top: 10px;
-}
-  
+  #contact .section-border {
+    background-color: aqua;
+    margin-top: 10px;
+  }
 }
 
 /* Media queries for desktop */

@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const wrapper = document.getElementById("wrapper");
   const header = document.getElementById("header");
 
+  //adjustHeaderPosition adjusts position based on viewport
   function adjustHeaderPosition() {
     if (window.scrollY >= wrapper.offsetHeight && window.innerWidth > 600) {
       header.style.top = "50px";
@@ -12,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
       sideMenu.style.display = "none";
     }
   }
-
   window.addEventListener("scroll", adjustHeaderPosition);
   window.addEventListener("resize", adjustHeaderPosition);
 
