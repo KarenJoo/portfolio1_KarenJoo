@@ -13,10 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
       sideMenu.style.display = "none";
     }
   }
-  window.addEventListener("scroll", adjustHeaderPosition);
-  window.addEventListener("resize", adjustHeaderPosition);
 
-  adjustHeaderPosition();
+  
 
   // Event listener for scrolling, side-menu appears when scrolled under wrapper
   window.addEventListener("scroll", function () {
