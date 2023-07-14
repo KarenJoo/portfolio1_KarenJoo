@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.scrollY >= wrapperRect.bottom) {
       sideMenu.style.display = "block";
     } else {
-      sideMenu.style.display = "none";
+      sideMenu.style.display = "none";   
     }
   });
 });
